@@ -1,0 +1,23 @@
+<?php
+
+// Define the function
+function f($x) {
+    return $x * $x + 3 * $x + 2;
+}
+
+// Compute the derivative of the function at a given point using forward differencing
+function derivative($x, $h) {
+    return (f($x + $h) - f($x)) / $h;
+}
+
+// Define the point at which to compute the derivative and the step size
+$x = 2.0;
+$h = 0.0001;
+
+// Compute the derivative
+$der = derivative($x, $h);
+
+// Print the result
+echo "The derivative of the function f at x = $x is approximately: $der\n";
+
+?>
